@@ -1,0 +1,340 @@
+@import "variables";
+@import "header";
+@import "carsRent";
+@import "ads";
+@import "filter";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,700;1,400&display=swap');
+/*Header*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  transition: .2s all ease;
+  ul {
+    list-style: none;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  width: calc(1440px - (64px * 2));
+  @media (max-width: 1300px) {
+    width: calc(1110px - (64px * 2));
+  }
+  @media (max-width: 1000px) {
+    width: calc(900px - (64px * 2));
+  }
+  @media (max-width: 700px) {
+    width: calc(600px - (64px * 2));
+  }
+}
+
+.nav__item {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  @media (max-width: 500px) {
+    justify-content: center;
+    gap: 100px;
+  }
+  .nav__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #90A3BF;
+  }
+  .nav__link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3563E9;
+    text-decoration: none;
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+/*Popular Car*/
+
+.popular_car {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  @media (max-width: 1300px) {
+    align-items: center;
+  }
+}
+
+.recommend__car {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
+}
+
+.show__more {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  p {
+    position: absolute;
+    right: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #90A3BF;
+    @media (max-width: 840px) {
+      right: 100px;
+    }
+  }
+}
+
+/*Category Page*/
+
+.categories {
+  background: #F6F7F9;
+  position: absolute;
+  right: 0;
+  padding: 32px;
+
+  width: calc(100% - 360px);
+  @media (max-width: 1000px) {
+    width: 100%
+  }
+}
+
+
+.details {
+  background: #F6F7F9;
+  position: absolute;
+  right: 0;
+  padding: 32px;
+
+  width: calc(100% - 360px);
+  @media (max-width: 1000px) {
+    width: 100%
+  }
+
+  .__reviews {
+    width: 1016px;
+    height: 452px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    padding: 24px;
+
+    .__header {
+
+    }
+  }
+
+  .details__content {
+    display: flex;
+    margin-bottom: 32px;
+
+    .__upper {
+      width: 100%;
+      display: flex;
+      gap: 32px;
+      flex-direction: row;
+    }
+
+    .__item__images {
+
+
+      .__list {
+        height: 124px;
+        display: flex;
+        gap: 24px;
+
+        .__img {
+
+          &:first-child {
+            padding: 6px;
+            border: 2px solid #3563E9;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .__view {background: #3563E9; border-radius: 10px; margin-bottom: 24px}
+
+      .__details {
+        position: absolute;
+        flex-direction: column;
+        display: flex;
+        width: 372px;
+        margin: 24px 0 0 24px;
+        gap: 16px;
+
+        .__title {
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 120%;
+          letter-spacing: -0.01em;
+
+          color: #FFFFFF;
+        }
+
+        .__text {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 160%;
+          letter-spacing: 0.02em;
+
+          color: #FFFFFF;
+        }
+
+      }
+    }
+
+    .__item__desc {
+      width: 492px;
+      height: 508px;
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      gap: 32px;
+      border-radius: 10px;
+
+      padding: 24px 24px 32px 24px;
+
+      .__header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        .__title {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 140%;
+
+          color: #1A202C;
+        }
+        .__subtitle {
+          display: flex;
+          gap: 8px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: 0.02em;
+
+          color: #3D5278;
+        }
+
+
+      }
+
+      .__content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 56px;
+
+        .__desc {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 200%;
+          letter-spacing: -0.02em;
+
+          color: #3D5278;
+        }
+
+        .__specification {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 44px;
+          height: 72px;
+          width: 444px;
+          .__spec {
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.02em;
+
+            color: #90A3BF;
+            p {
+              display: flex;
+              gap: 32px;
+              justify-content: space-between;
+
+
+              &:first-child {
+                margin-bottom: 24px;
+              }
+            }
+
+            span {
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 25px;
+              letter-spacing: -0.02em;
+
+              color: #3D5278;
+            }
+          }
+        }
+
+      }
+
+      .__footer {
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .__price {
+          .__title {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 35px;
+
+            color: #1A202C;
+
+            span {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+
+              color: #90A3BF;
+            }
+          }
+          .__subtitle {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            text-decoration-line: line-through;
+
+            color: #90A3BF;
+
+          }
+        }
+      }
+    }
+
+  }
+}

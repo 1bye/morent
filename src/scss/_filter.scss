@@ -1,0 +1,124 @@
+.filter {
+  width: 360px;
+  min-height: 100vh;
+  height: auto;
+  position: absolute;
+  background: #ffffff;
+  padding: 32px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+
+
+
+  .capacity,
+  .price,
+  .type {
+    .__title {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+
+      color: #94A7CB;
+      margin-bottom: 28px;
+    }
+
+    .__content {
+      li {
+        > * {
+          margin-left: 8px;
+        }
+        margin-bottom: 16px;
+      }
+      input[type=checkbox] {
+        width: 22px;
+        height: 22px;
+        border-radius: 8px;
+
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+
+        border: 1px solid #90A3BF;
+
+        &:checked {
+          background: url("public/checked.svg") no-repeat;
+        }
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+
+        color: #3D5278;
+        margin-top: 12px;
+      }
+
+      input[type=range] {
+        width: 296px;
+        display: flex;
+
+        -webkit-appearance: none;
+        background: #C3D4E9;
+        height: 20px;
+        border-radius: 12px;
+        overflow: hidden;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 19px;
+          height: 20px;
+          border-radius: 100vw;
+          background: #3563E9;
+          outline: 4px solid #FFFFFF;
+
+          box-shadow: -200px 0 0 200px dodgerblue;
+          cursor: pointer;
+        }
+        &::-webkit-slider-runnable-track {
+          -webkit-appearance: none;
+
+          align-self: center;
+
+          border-radius: 12px;
+
+        }
+
+        &::-moz-range-track {
+          height: 12px;
+          background: #C3D4E9;
+        }
+        //&::-moz-range-progress {
+        //  background: #C3D4E9
+        //}
+      }
+
+      label {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        color: #3D5278;
+        letter-spacing: -0.02em;
+
+        span {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 150%;
+
+          letter-spacing: -0.02em;
+          color: #90A3BF;
+
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+}
